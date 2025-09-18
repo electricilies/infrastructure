@@ -1,0 +1,16 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/kustomization.json
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namePrefix: electricilies-
+labels:
+  - pairs:
+      app.kubernetes.io/name: electricilies-backend
+    includeSelectors: true
+resources:
+  - ../../../base/backend/kustomization.yaml
+  - ./electricilies/
+  - ./namespace.yaml
+images:
+  - name: ghcr.io/electricilies/backend
+    newTag: 0.1.0
