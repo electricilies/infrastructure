@@ -1,0 +1,35 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master/job-batch-v1.json
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: migration
+spec:
+  template:
+    spec:
+      containers:
+        - name: migrate
+          image: migrate/migrate
+          env:
+            - name: USER
+              valueFrom:
+                secretKeyRef:
+                  name: cnpg
+                  key: username
+            - name: PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cnpg
+                  key: password
+            - name: HOST
+              value: cnpg
+            - name: NAME
+              value: "db"
+          command:
+            - sh
+            - -c
+            - | # language: sh
+              migrate \
+                -source "github://electricilies/backend/migrations" \
+                -database "postgres://${USER}:${PASSWORD}@${HOST}:5432/${NAME}?sslmode=disable" \
+                up

@@ -3,7 +3,7 @@
 apiVersion: elasticsearch.k8s.elastic.co/v1
 kind: Elasticsearch
 metadata:
-  name: &name elasticsearch
+  name: &name elastic
 spec:
   version: 9.1.4
   nodeSets:
@@ -17,7 +17,7 @@ spec:
             - name: *name
               resources:
                 requests:
-                  cpu: 100m
+                  cpu: 10m
                   memory: 1Gi
                 limits:
                   cpu: 500m

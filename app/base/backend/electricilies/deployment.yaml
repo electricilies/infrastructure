@@ -16,14 +16,14 @@ spec:
             - containerPort: 8080
           env:
             - name: ELASTIC_URL
-              value: http://elasticsearch-es-http:9200
+              value: http://elastic-es-http:9200
             - name: ELASTIC_USERNAME
               value: elastic
             - name: ELASTIC_PASSWORD
               valueFrom:
                 secretKeyRef:
                   key: elastic
-                  name: elasticsearch-es-elastic-user
+                  name: elastic-es-elastic-user
           envFrom:
             - secretRef:
                 name: electricilies-keycloak
@@ -39,3 +39,10 @@ spec:
             <<: *health
             periodSeconds: 10
             failureThreshold: 3
+          resources:
+            requests:
+              cpu: 10m
+              memory: 50Mi
+            limits:
+              cpu: 500m
+              memory: 200Mi
