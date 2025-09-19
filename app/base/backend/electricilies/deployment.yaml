@@ -7,7 +7,6 @@ metadata:
   annotations:
     reloader.stakater.com/auto: "true"
 spec:
-  selector: {}
   template:
     spec:
       containers:
