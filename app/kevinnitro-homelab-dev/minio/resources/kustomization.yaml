@@ -3,6 +3,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namePrefix: electricilies-
+namespace: electricilies-minio
 resources:
   - ../../../base/minio/kustomization.yaml
   - ./minio/

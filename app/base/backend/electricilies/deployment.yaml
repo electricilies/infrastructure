@@ -15,6 +15,21 @@ spec:
           image: ghcr.io/electricilies/backend:latest
           ports:
             - containerPort: 8080
+          env:
+            - name: ELASTIC_URL
+              value: http://elasticsearch-es-http:9200
+            - name: ELASTIC_USERNAME
+              value: elastic
+            - name: ELASTIC_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: elastic
+                  name: elasticsearch-es-elastic-user
+          envFrom:
+            - secretRef:
+                name: electricilies-keycloak
+            - secretRef:
+                name: electricilies-postgres
           readinessProbe: &health
             httpGet:
               path: /api/health

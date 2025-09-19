@@ -2,11 +2,8 @@
 # yaml-language-server: $schema=https://www.schemastore.org/kustomization.json
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-labels:
-  - pairs:
-      app.kubernetes.io/name: frontend
-    includeSelectors: true
+namePrefix: electricilies-
+namespace: electricilies-postgres
 resources:
-  - ./deployment.yaml
-  - ./keycloak.secret.sops.yaml
-  - ./service.yaml
+  - ../../../base/postgres/kustomization.yaml
+  - ./namespace.yaml

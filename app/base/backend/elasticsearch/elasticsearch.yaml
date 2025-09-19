@@ -1,0 +1,28 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/elasticsearch.k8s.elastic.co/elasticsearch_v1.json
+apiVersion: elasticsearch.k8s.elastic.co/v1
+kind: Elasticsearch
+metadata:
+  name: &name elasticsearch
+spec:
+  version: 9.1.4
+  nodeSets:
+    - name: default
+      count: 1
+      config:
+        node.store.allow_mmap: false
+      podTemplate:
+        spec:
+          containers:
+            - name: *name
+              resources:
+                requests:
+                  cpu: 100m
+                  memory: 1Gi
+                limits:
+                  cpu: 500m
+                  memory: 1Gi
+  http:
+    tls:
+      selfSignedCertificate:
+        disabled: true

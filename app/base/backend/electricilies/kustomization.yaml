@@ -2,11 +2,12 @@
 # yaml-language-server: $schema=https://www.schemastore.org/kustomization.json
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namePrefix: backend-
 labels:
   - pairs:
       app.kubernetes.io/name: backend
     includeSelectors: true
 resources:
   - ./deployment.yaml
+  - ./keycloak.secret.sops.yaml
+  - ./postgres.secret.sops.yaml
   - ./service.yaml

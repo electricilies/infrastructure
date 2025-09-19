@@ -7,14 +7,14 @@ metadata:
 spec:
   instances: 1
   storage:
-    size: 1Gi
+    size: 100Mi
   monitoring:
     enablePodMonitor: false
   bootstrap:
     initdb:
       database: electricilies
       secret:
-        name: keycloak-auth
+        name: *name
   managed:
     services:
       disabledDefaultServices:
