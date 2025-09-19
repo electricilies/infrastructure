@@ -3,15 +3,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../../base/postgres/
+  - ../../base/elastic/
   - ./namespace.yaml
 patches:
-  - target: &ks
+  - target:
       version: kustomize.toolkit.fluxcd.io/v1
       kind: Kustomization
-      name: postgres-cnpg
-    path: ./patches/cnpg.ks.yaml
-  - target:
-      <<: *ks
-      name: postgres-migration
-    path: ./patches/migration.ks.yaml
+      name: elastic-elastic
+    path: ./patches/elastic.ks.yaml

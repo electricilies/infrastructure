@@ -1,0 +1,10 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/fluxcd-community/flux2-schemas/main/kustomization-kustomize-v1.json
+spec:
+  path: app/kevinnitro-homelab-dev/elastic/resources/elasticsearch/
+  postBuild:
+    substituteFrom:
+      - kind: Secret
+        name: setting
+      - kind: ConfigMap
+        name: setting

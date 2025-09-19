@@ -12,4 +12,4 @@ spec:
   sourceRef:
     kind: GitRepository
     name: *name
-  path: app/kevinnitro-homelab-dev/
+  path: app/base/

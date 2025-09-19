@@ -16,15 +16,10 @@ spec:
             - containerPort: 8080
           env:
             - name: ELASTIC_URL
-              value: http://elastic-es-http:9200
-            - name: ELASTIC_USERNAME
-              value: elastic
-            - name: ELASTIC_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  key: elastic
-                  name: elastic-es-elastic-user
+              value: http://elastic-es-http.elastic:9200
           envFrom:
+            - secretRef:
+                name: electricilies-elastic
             - secretRef:
                 name: electricilies-keycloak
             - secretRef:

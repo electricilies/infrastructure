@@ -2,8 +2,6 @@
 # yaml-language-server: $schema=https://www.schemastore.org/kustomization.json
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namePrefix: electricilies-
 namespace: electricilies-postgres
 resources:
-  - ../../../base/postgres/kustomization.yaml
-  - ./namespace.yaml
+  - ../../../../base/postgres/cnpg/

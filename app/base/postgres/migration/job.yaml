@@ -9,7 +9,15 @@ spec:
     spec:
       containers:
         - name: migrate
-          image: migrate/migrate
+          image: migrate/migrate:latest
+          command:
+            - sh
+            - -c
+            - | # language: sh
+              migrate \
+                -source "github://electricilies/backend/migrations" \
+                -database "postgres://${USER}:${PASSWORD}@${HOST}:5432/${NAME}?sslmode=disable" \
+                up
           env:
             - name: USER
               valueFrom:
@@ -24,12 +32,4 @@ spec:
             - name: HOST
               value: cnpg
             - name: NAME
-              value: "db"
-          command:
-            - sh
-            - -c
-            - | # language: sh
-              migrate \
-                -source "github://electricilies/backend/migrations" \
-                -database "postgres://${USER}:${PASSWORD}@${HOST}:5432/${NAME}?sslmode=disable" \
-                up
+              value: electricilies

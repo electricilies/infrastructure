@@ -2,5 +2,9 @@
 # yaml-language-server: $schema=https://www.schemastore.org/kustomization.json
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: electricilies-postgres
 resources:
-  - ./httproute.yaml
+  - ../../../../base/postgres/migration/
+images:
+  - name: migrate/migrate
+    newTag: v4.19.0
