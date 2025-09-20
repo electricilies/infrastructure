@@ -9,3 +9,5 @@ resources:
   - ./frontend/
   - ./minio/
   - ./postgres/
+configurations:
+  - ./kustomizeconfig.yaml

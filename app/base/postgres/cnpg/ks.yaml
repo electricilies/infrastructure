@@ -14,3 +14,7 @@ spec:
     kind: GitRepository
     name: electricilies
   path: app/base/postgres/cnpg/
+  decryption:
+    provider: sops
+    secretRef:
+      name: electricilies-sops-age
