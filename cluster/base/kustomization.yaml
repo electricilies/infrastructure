@@ -6,4 +6,3 @@ namespace: flux-system
 resources:
   - ./app.yaml
   - ./repository.yaml
-  - ./sops.secret.sops.yaml
