@@ -1,6 +1,7 @@
 module.exports = {
   branchPrefix: "electricilies-renovate/",
   platform: "github",
+  onboarding: false,
   repositories: [process.env.RENOVATE_GITHUB_REPOSITORY],
   extends: [
     `local>${process.env.RENOVATE_GITHUB_REPOSITORY_OWNER}/renovate-config`,
@@ -12,6 +13,7 @@ module.exports = {
       {
         matchPackageNames: process.env.RENOVATE_TARGET_IMAGES.split(","),
         matchUpdateTypes: ["digest"],
+        automerge: true,
       },
     ],
   },
