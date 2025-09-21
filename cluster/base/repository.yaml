@@ -5,8 +5,8 @@ kind: GitRepository
 metadata:
   name: electricilies
 spec:
-  interval: 10m
-  timeout: 5m
+  interval: 30m
+  timeout: 1m
   ref:
     branch: main
   url: https://github.com/electricilies/kubernetes-manifest

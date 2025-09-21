@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://raw.githubusercontent.com/fluxcd-community/flux2-schemas/main/kustomization-kustomize-v1.json
 metadata:
-  name: electricilies
+  name: electricilies-app
   labels:
     kevinnitro/project: electricilies
 spec:
