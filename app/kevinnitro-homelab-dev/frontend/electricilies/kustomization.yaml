@@ -12,4 +12,4 @@ labels:
     includeSelectors: true
 images:
   - name: ghcr.io/electricilies/frontend
-    newTag: 0.1.0
+    newTag: c72437101ff158f0b1ac6ff017b994d3d368885d
