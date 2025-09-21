@@ -1,0 +1,39 @@
+name: Call Update Image
+
+on:
+  workflow_call:
+    inputs:
+      images:
+        required: true
+        type: string
+        description: What image(s) to update in this org, separated by ","
+      environments:
+        required: false
+        type: string
+        description: What environment(s) to update, separated by ",", default to all (Not handled yet)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Get token
+        id: get_token
+        uses: actions/create-github-app-token@v2
+        with:
+          private-key: ${{ secrets.ELECTRICILIES_BOT_PRIVATE_KEY }}
+          app-id: ${{ vars.ELECTRICILIES_BOT_APP_ID }}
+          owner: ${{ github.repository_owner }}
+          repositories: kubernetes-manifest
+      - name: Trigger Renovate
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ steps.get_token.outputs.token }}
+          repository: ${{ github.repository_owner }}/kubernetes-manifest
+          event-type: renovate
+          client-payload: |- # language: json
+            {
+              "images": "ghcr.io/${{ github.repository_owner }}/${{ inputs.image }}",
+              "environments": "${{ inputs.environments }}"
+            }
