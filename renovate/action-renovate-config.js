@@ -8,7 +8,7 @@ module.exports = {
     managerFilePatterns: ["(^|/)kustomization\\.ya?ml$"],
     packageRules: [
       {
-        matchDepNames: process.env.RENOVATE_IMAGES.split(","),
+        matchDepNames: process.env.RENOVATE_TARGET_IMAGES.split(","),
       },
     ],
   },
