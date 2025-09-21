@@ -14,7 +14,7 @@ module.exports = {
     packageRules: [
       {
         matchPackageNames: process.env.RENOVATE_TARGET_IMAGES.split(","),
-        matchUpdateTypes: ["bump"],
+        matchUpdateTypes: ["major", "minor", "patch", "digest"],
       },
     ],
   },
