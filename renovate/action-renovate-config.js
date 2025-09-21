@@ -3,7 +3,7 @@ module.exports = {
   platform: "github",
   repositories: [process.env.RENOVATE_GITHUB_REPOSITORY],
   extends: [
-    `github>${process.env.RENOVATE_GITHUB_REPOSITORY_OWNER}/renovate-config`,
+    `local>${process.env.RENOVATE_GITHUB_REPOSITORY_OWNER}/renovate-config`,
   ],
   enabledManagers: ["kustomize"],
   kustomize: {
