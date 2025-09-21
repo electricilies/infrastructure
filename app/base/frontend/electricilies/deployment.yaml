@@ -17,16 +17,16 @@ spec:
           envFrom:
             - secretRef:
                 name: electricilies-keycloak
-          readinessProbe: &health
-            httpGet:
-              path: /api/health
-              port: 3000
-            periodSeconds: 5
-            failureThreshold: 10
-          livenessProbe:
-            <<: *health
-            periodSeconds: 10
-            failureThreshold: 3
+          # readinessProbe: &health
+          #   httpGet:
+          #     path: /api/health
+          #     port: 3000
+          #   periodSeconds: 5
+          #   failureThreshold: 10
+          # livenessProbe:
+          #   <<: *health
+          #   periodSeconds: 10
+          #   failureThreshold: 3
           resources:
             requests:
               cpu: 10m
@@ -34,3 +34,4 @@ spec:
             limits:
               cpu: 500m
               memory: 500Mi
+  selector: {}

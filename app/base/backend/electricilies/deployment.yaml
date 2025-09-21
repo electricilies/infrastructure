@@ -24,16 +24,16 @@ spec:
                 name: electricilies-keycloak
             - secretRef:
                 name: electricilies-postgres
-          readinessProbe: &health
-            httpGet:
-              path: /api/health
-              port: 8080
-            periodSeconds: 5
-            failureThreshold: 10
-          livenessProbe:
-            <<: *health
-            periodSeconds: 10
-            failureThreshold: 3
+          # readinessProbe: &health
+          #   httpGet:
+          #     path: /api/health
+          #     port: 8080
+          #   periodSeconds: 5
+          #   failureThreshold: 10
+          # livenessProbe:
+          #   <<: *health
+          #   periodSeconds: 10
+          #   failureThreshold: 3
           resources:
             requests:
               cpu: 10m
@@ -41,3 +41,4 @@ spec:
             limits:
               cpu: 500m
               memory: 200Mi
+  selector: {}
