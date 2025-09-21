@@ -6,4 +6,8 @@ resources:
   - ../base/
   - ./sops.secret.sops.yaml
 patches:
-  - path: ./patches/app.yaml
+  - target:
+      version: kustomize.toolkit.fluxcd.io/v1
+      kind: Kustomization
+      name: app
+    path: ./patches/app.yaml

@@ -12,9 +12,6 @@ patches:
   - target:
       version: kustomize.toolkit.fluxcd.io/v1
       kind: Kustomization
-    patch: |- # language: yaml
-      - op: add
-        path: /metadata/namespace
-        value: flux-system
+    path: ./patches/ks.yaml
 configurations:
   - ./kustomizeconfig.yaml
