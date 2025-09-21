@@ -7,14 +7,14 @@ module.exports = {
   extends: [
     `local>${process.env.RENOVATE_GITHUB_REPOSITORY_OWNER}/renovate-config`,
   ],
+  automerge: true,
   enabledManagers: ["kustomize"],
   kustomize: {
     managerFilePatterns: ["(^|/)kustomization\\.ya?ml$"],
     packageRules: [
       {
         matchPackageNames: process.env.RENOVATE_TARGET_IMAGES.split(","),
-        matchUpdateTypes: ["digest"],
-        automerge: true,
+        matchUpdateTypes: ["bump"],
       },
     ],
   },
