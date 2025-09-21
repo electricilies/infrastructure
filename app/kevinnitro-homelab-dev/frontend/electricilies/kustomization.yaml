@@ -12,4 +12,4 @@ labels:
     includeSelectors: true
 images:
   - name: ghcr.io/electricilies/frontend
-    digest: sha256:67e6d36acb85a8ae3c1314decedbfb71efe8fc7418c3e8ea07fe00618925cd87
+    digest: sha256:8710fe8b12bac235b2a6232af18222b4e5ba14c7b9bc95dcdc923dacfedcffad
