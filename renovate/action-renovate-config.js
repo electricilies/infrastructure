@@ -2,7 +2,7 @@ module.exports = {
   branchPrefix: "electricilies-renovate/",
   platform: "github",
   onboarding: false,
-  platformCommit: true,
+  platformCommit: "enabled",
   repositories: [process.env.RENOVATE_GITHUB_REPOSITORY],
   extends: [
     `local>${process.env.RENOVATE_GITHUB_REPOSITORY_OWNER}/renovate-config`,
