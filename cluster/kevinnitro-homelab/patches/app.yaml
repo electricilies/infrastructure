@@ -6,3 +6,5 @@ metadata:
   name: electricilies
 spec:
   path: app/kevinnitro-homelab-dev/
+  dependsOn:
+    - name: infrastructure-controller
