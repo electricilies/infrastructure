@@ -30,8 +30,9 @@ jobs:
         with:
           token: ${{ steps.get_token.outputs.token }}
           configurationFile: renovate/action-renovate-config.js
-          env-regex: ^(?:RENOVATE_\w+|GITHUB_\w+)$
         env:
+          RENOVATE_GITHUB_REPOSITORY: ${{ github.repository }}
+          RENOVATE_GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
           RENOVATE_PLATFORM_COMMIT: "true"
           RENOVATE_TARGET_IMAGES: ${{ env.IMAGES }}
           RENOVATE_TARGET_ENVIRONMENTS: ${{ env.ENVIRONMENTS }}
