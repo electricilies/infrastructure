@@ -5,8 +5,6 @@ kind: Kustomization
 namespace: electricilies
 resources:
   - ../base/
-  - ./sops.secret.sops.yaml
-  - ./namespace.yaml
 patches:
   - target:
       version: kustomize.toolkit.fluxcd.io/v1
