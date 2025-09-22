@@ -7,7 +7,10 @@ resources:
   - ../base/
 patches:
   - target:
-      version: kustomize.toolkit.fluxcd.io/v1
+      group: kustomize.toolkit.fluxcd.io
+      version: v1
       kind: Kustomization
       name: app
     path: ./patches/app.yaml
+    options:
+      allowNameChange: true
