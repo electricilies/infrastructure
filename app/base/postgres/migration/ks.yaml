@@ -5,7 +5,7 @@ kind: Kustomization
 metadata:
   name: postgres-migration
   labels:
-    flux.kevinnitro/substitue: "0"
+    flux.kevinnitro/substitute: "0"
 spec:
   interval: 1h
   retryInterval: 1m

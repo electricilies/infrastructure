@@ -22,7 +22,7 @@ patches:
       group: kustomize.toolkit.fluxcd.io
       version: v1
       kind: Kustomization
-      labelSelector: flux.kevinnitro/substitue notin (0)
+      labelSelector: flux.kevinnitro/substitute notin (0)
     patch: |- # language: yaml
       - op: add
         path: /spec/postBuild
