@@ -5,12 +5,14 @@ kind: Kustomization
 namespace: electricilies
 resources:
   - ../base/
+  - ./infrastructure.ks.yaml
+  - ./namespace.yaml
 patches:
   - target:
       group: kustomize.toolkit.fluxcd.io
       version: v1
       kind: Kustomization
       name: app
-    path: ./patches/app.yaml
+    path: ./patches/app.ks.yaml
     options:
       allowNameChange: true
