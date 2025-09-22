@@ -21,6 +21,3 @@ spec:
             requests:
               storage: 500Mi
       volumesPerServer: 1
-  env:
-    - name: MINIO_BROWSER_REDIRECT_URLL
-      value: minio-console.electricilies.${IDVN_DOMAIN}

@@ -9,10 +9,16 @@ resources:
   - ./console.httproute.yaml
 patches:
   - target:
-      version: minio.min.io/v2
+      group: minio.min.io
+      version: v2
       kind: Tenant
-      name: minio-minio
     patch: |- # language: yaml
+      - op: add
+        path: /spec
+        value: {}
+      - op: add
+        path: /spec/env
+        value: []
       - op: add
         path: /spec/env/-
         value:

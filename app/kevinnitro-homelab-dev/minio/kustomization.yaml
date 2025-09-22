@@ -6,8 +6,4 @@ resources:
   - ../../base/minio/
   - ./namespace.yaml
 patches:
-  - target:
-      version: kustomize.toolkit.fluxcd.io/v1
-      kind: Kustomization
-      name: minio-minio
-    path: ./patches/minio.ks.yaml
+  - path: ./patches/minio.ks.yaml

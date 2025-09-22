@@ -6,17 +6,14 @@ resources:
   - ../../base/backend/
   - ./namespace.yaml
 patches:
+  - path: ./patches/electricilies.ks.yaml
   - target:
-      version: kustomize.toolkit.fluxcd.io/v1
-      kind: Kustomization
-      name: backend-electricilies
-    path: ./patches/electricilies.ks.yaml
-  - target:
-      version: kustomize.toolkit.fluxcd.io/v1
+      group: kustomize.toolkit.fluxcd.io
+      version: v1
       kind: Kustomization
       name: backend-electricilies
     patch: |- # language: yaml
       - op: add
         path: /spec/dependsOn/-
         value:
-          - name: app-keycloak
+          name: app-keycloak

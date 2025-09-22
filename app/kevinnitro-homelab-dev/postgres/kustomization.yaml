@@ -6,12 +6,5 @@ resources:
   - ../../base/postgres/
   - ./namespace.yaml
 patches:
-  - target: &ks
-      version: kustomize.toolkit.fluxcd.io/v1
-      kind: Kustomization
-      name: postgres-cnpg
-    path: ./patches/cnpg.ks.yaml
-  - target:
-      <<: *ks
-      name: postgres-migration
-    path: ./patches/migration.ks.yaml
+  - path: ./patches/cnpg.ks.yaml
+  - path: ./patches/migration.ks.yaml

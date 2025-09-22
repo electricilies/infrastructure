@@ -6,8 +6,4 @@ resources:
   - ../../base/frontend/
   - ./namespace.yaml
 patches:
-  - target:
-      version: kustomize.toolkit.fluxcd.io/v1
-      kind: Kustomization
-      name: frontend-electricilies
-    path: ./patches/electricilies.ks.yaml
+  - path: ./patches/electricilies.ks.yaml

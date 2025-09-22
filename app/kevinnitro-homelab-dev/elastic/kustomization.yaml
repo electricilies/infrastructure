@@ -6,8 +6,4 @@ resources:
   - ../../base/elastic/
   - ./namespace.yaml
 patches:
-  - target:
-      version: kustomize.toolkit.fluxcd.io/v1
-      kind: Kustomization
-      name: elastic-elastic
-    path: ./patches/elastic.ks.yaml
+  - path: ./patches/elastic.ks.yaml
