@@ -18,6 +18,12 @@ patches:
       - op: add
         path: /metadata/namespace
         value: flux-system
+  - target:
+      group: kustomize.toolkit.fluxcd.io
+      version: v1
+      kind: Kustomization
+      labelSelector: flux.kevinnitro/substitue notin (0)
+    patch: |- # language: yaml
       - op: add
         path: /spec/postBuild
         value: {}
