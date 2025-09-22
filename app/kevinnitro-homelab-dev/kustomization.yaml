@@ -8,6 +8,7 @@ resources:
   - ./frontend/
   - ./minio/
   - ./postgres/
+  - ./namespace.yaml
 patches:
   - target:
       group: kustomize.toolkit.fluxcd.io
@@ -16,7 +17,7 @@ patches:
     patch: |- # language: yaml
       - op: add
         path: /metadata/namespace
-        value: electricilies-dev
+        value: electricilies
   - target:
       group: kustomize.toolkit.fluxcd.io
       version: v1
