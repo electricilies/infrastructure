@@ -4,8 +4,6 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: migration
-  labels:
-    flux.kevinnitro/substitue: "0"
 spec:
   template:
     spec:
