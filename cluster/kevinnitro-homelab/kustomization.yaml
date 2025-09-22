@@ -9,11 +9,4 @@ resources:
   - ./namespace.yaml
   - ./setting.ks.yaml
 patches:
-  - target:
-      group: kustomize.toolkit.fluxcd.io
-      version: v1
-      kind: Kustomization
-      name: app
-    path: ./patches/app.ks.yaml
-    options:
-      allowNameChange: true
+  - path: ./patches/app.ks.yaml
