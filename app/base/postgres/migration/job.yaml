@@ -5,6 +5,7 @@ kind: Job
 metadata:
   name: migration
 spec:
+  ttlSecondsAfterFinished: 0
   template:
     spec:
       restartPolicy: Never
