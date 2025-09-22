@@ -13,9 +13,5 @@ spec:
     name: webhook
   resources:
     - kind: GitRepository
-      name: electricilies
-    - kind: Kustomization
-      apiVersion: kustomize.toolkit.fluxcd.io/v1
-      name: "*"
-      matchLabels:
-        kevinnitro/project: electricilies
+      name: &electricilies electricilies
+      namespace: *electricilies
