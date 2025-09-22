@@ -17,3 +17,4 @@ patches:
         path: /spec/dependsOn/-
         value:
           name: app-keycloak
+          namespace: flux-system
