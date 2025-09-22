@@ -6,6 +6,9 @@ metadata:
   name: &name cnpg
 spec:
   instances: 1
+  env:
+    - name: TZ
+      value: Asia/Ho_Chi_Minh
   storage:
     size: 100Mi
   monitoring:

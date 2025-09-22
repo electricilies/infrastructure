@@ -2,7 +2,6 @@
 # yaml-language-server: $schema=https://www.schemastore.org/kustomization.json
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namePrefix: electricilies-
 resources:
   - ./backend/
   - ./elastic/
@@ -17,7 +16,7 @@ patches:
     patch: |- # language: yaml
       - op: add
         path: /metadata/namespace
-        value: flux-system
+        value: electricilies-dev
   - target:
       group: kustomize.toolkit.fluxcd.io
       version: v1
@@ -40,5 +39,3 @@ patches:
         value:
           kind: ConfigMap
           name: setting
-configurations:
-  - ./kustomizeconfig.yaml
