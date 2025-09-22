@@ -3,7 +3,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: app
+  name: app-dev
 spec:
   path: app/kevinnitro-homelab-dev/
   dependsOn:

@@ -9,4 +9,4 @@ resources:
   - ./namespace.yaml
   - ./setting.ks.yaml
 patches:
-  - path: ./patches/app.ks.yaml
+  - path: ./patches/dev.app.ks.yaml
