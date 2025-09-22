@@ -7,3 +7,5 @@ resources:
   - ../../../../base/minio/minio/
   - ./api.httproute.yaml
   - ./console.httproute.yaml
+patches:
+  - path: ./tenant.yaml

@@ -1,0 +1,10 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/minio.min.io/tenant_v2.json
+apiVersion: minio.min.io/v2
+kind: Tenant
+metadata:
+  name: minio
+spec:
+  env:
+    - name: MINIO_BROWSER_REDIRECT_URL
+      value: minio-console.electricilies.${IDVN_DOMAIN}
