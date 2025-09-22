@@ -14,7 +14,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: electricilies
-  path: setting/
+  path: setting/kevinnitro-homelab/
   decryption:
     provider: sops
     secretRef:
