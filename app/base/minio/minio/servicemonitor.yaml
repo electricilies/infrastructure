@@ -3,7 +3,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: &name minio
+  name: &name minio-minio
 spec:
   selector:
     matchLabels:

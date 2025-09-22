@@ -4,7 +4,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: electricilies-backend
 resources:
-  - ../../../../base/backend/electricilies/
+  - ../../../base/backend/electricilies/
   - ./httproute.yaml
 labels:
   - pairs:

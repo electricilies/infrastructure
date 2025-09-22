@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: electricilies-frontend
 resources:
   - ./httproute.yaml
-  - ../../../../base/frontend/electricilies/
+  - ../../../base/frontend/electricilies/
 labels:
   - pairs:
       app.kubernetes.io/name: electricilies-frontend

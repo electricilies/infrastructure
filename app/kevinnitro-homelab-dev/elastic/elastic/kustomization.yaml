@@ -4,5 +4,5 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: electricilies-elastic
 resources:
-  - ../../../../base/elastic/elastic/
+  - ../../../base/elastic/elastic/
   - ./httproute.yaml

@@ -4,8 +4,17 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: electricilies-minio
 resources:
-  - ../../../../base/minio/minio/
+  - ../../../base/minio/minio/
   - ./api.httproute.yaml
   - ./console.httproute.yaml
 patches:
-  - path: ./tenant.yaml
+  - target:
+      version: minio.min.io/v2
+      kind: Tenant
+      name: minio-minio
+    patch: |- # language: yaml
+      - op: add
+        path: /spec/env/-
+        value:
+          name: MINIO_BROWSER_REDIRECT_URL
+          value: minio-console.electricilies.${IDVN_DOMAIN}

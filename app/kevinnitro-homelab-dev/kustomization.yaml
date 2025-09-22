@@ -5,13 +5,9 @@ kind: Kustomization
 namePrefix: electricilies-
 resources:
   - ./backend/
+  - ./elastic/
   - ./frontend/
   - ./minio/
   - ./postgres/
-patches:
-  - target:
-      version: kustomize.toolkit.fluxcd.io/v1
-      kind: Kustomization
-    path: ./patches/ks.yaml
 configurations:
   - ./kustomizeconfig.yaml
