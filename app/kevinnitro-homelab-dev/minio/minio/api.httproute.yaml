@@ -46,3 +46,4 @@ spec:
             value: /
       backendRefs:
         - name: http-minio
+          port: 9000

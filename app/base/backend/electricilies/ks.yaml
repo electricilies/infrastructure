@@ -15,7 +15,6 @@ spec:
     name: electricilies
   path: app/base/backend/electricilies/
   dependsOn:
-    - name: backend-elastic
     - name: postgres-migrations
   decryption:
     provider: sops

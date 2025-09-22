@@ -46,3 +46,4 @@ spec:
             value: /
       backendRefs:
         - name: http-console
+          port: 9443
