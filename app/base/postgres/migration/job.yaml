@@ -13,7 +13,8 @@ spec:
           image: migrate/migrate:latest
           command:
             - sh
-            - -c
+          args:
+            - -euc
             - | # language: sh
               migrate \
                 -source 'github://electricilies/backend/migration' \
