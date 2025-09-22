@@ -8,3 +8,4 @@ spec:
   path: app/kevinnitro-homelab-dev/
   dependsOn:
     - name: infrastructure-controller
+      namespace: flux-system
