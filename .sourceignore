@@ -1,5 +1,6 @@
 # vim:ft=gitignore:
 /**
-/app/
-/cluster/
-/infrastructure/
+!/app/
+!/cluster/
+!/infrastructure/
+!/setting/
