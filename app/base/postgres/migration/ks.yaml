@@ -12,6 +12,7 @@ spec:
   timeout: 5m
   wait: true
   prune: true
+  force: true
   sourceRef:
     kind: GitRepository
     name: electricilies
