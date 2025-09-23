@@ -17,6 +17,10 @@ spec:
           env:
             - name: ELASTIC_URL
               value: http://elastic-es-http.elastic:9200
+            - name: DB_HOST
+              value: cnpg.postgres
+            - name: DB_DATABASE
+              value: *name
           envFrom:
             - secretRef:
                 name: electricilies-elastic

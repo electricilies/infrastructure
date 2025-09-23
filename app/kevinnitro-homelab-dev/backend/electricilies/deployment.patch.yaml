@@ -1,0 +1,16 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/master-standalone-strict/deployment.json
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: &name electricilies
+spec:
+  template:
+    spec:
+      containers:
+        - name: *name
+          env:
+            - name: ELASTIC_URL
+              value: http://elastic-es-http.electricilies-dev-elastic:9200
+            - name: DB_HOST
+              value: cnpg.electricilies-dev-postgres

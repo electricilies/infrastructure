@@ -10,6 +10,8 @@ labels:
   - pairs:
       app.kubernetes.io/name: electricilies-backend
     includeSelectors: true
+patches:
+  - path: ./deployment.patch.yaml
 images:
   - name: ghcr.io/electricilies/backend
     digest: sha256:b6c6a427bad023e2ce561c930eed766d8973cb116a6954ee1eb22c2b3bd88b38
