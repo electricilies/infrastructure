@@ -45,5 +45,5 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: frontend-electricilies
+        - name: electricilies
           port: 3000

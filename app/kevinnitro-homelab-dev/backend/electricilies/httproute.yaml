@@ -45,5 +45,5 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: backend-electricilies
+        - name: electricilies
           port: 8080
