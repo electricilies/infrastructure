@@ -10,6 +10,8 @@ labels:
   - pairs:
       app.kubernetes.io/name: electricilies-backend
     includeSelectors: true
+  - pairs:
+      alloy.kevinnitro/scrape: "1"
 patches:
   - path: ./deployment.patch.yaml
 images:
