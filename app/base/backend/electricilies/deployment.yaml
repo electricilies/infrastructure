@@ -21,6 +21,8 @@ spec:
               value: cnpg.postgres
             - name: DB_DATABASE
               value: *name
+            - name: DB_PORT
+              value: "5432"
           envFrom:
             - secretRef:
                 name: electricilies-elastic
