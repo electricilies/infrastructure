@@ -6,5 +6,5 @@ resources:
   - ../../base/postgres/
   - ./namespace.yaml
 patches:
-  - path: ./patches/cnpg.ks.yaml
-  - path: ./patches/migration.ks.yaml
+  - path: ./cnpg.ks.patch.yaml
+  - path: ./migration.ks.patch.yaml

@@ -6,4 +6,4 @@ resources:
   - ../../base/frontend/
   - ./namespace.yaml
 patches:
-  - path: ./patches/electricilies.ks.yaml
+  - path: ./electricilies.ks.patch.yaml

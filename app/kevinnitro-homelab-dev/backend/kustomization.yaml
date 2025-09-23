@@ -6,7 +6,7 @@ resources:
   - ../../base/backend/
   - ./namespace.yaml
 patches:
-  - path: ./patches/electricilies.ks.yaml
+  - path: ./electricilies.ks.patch.yaml
   - target:
       group: kustomize.toolkit.fluxcd.io
       version: v1

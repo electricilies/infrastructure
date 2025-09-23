@@ -6,4 +6,4 @@ resources:
   - ../../base/elastic/
   - ./namespace.yaml
 patches:
-  - path: ./patches/elastic.ks.yaml
+  - path: ./elastic.ks.patch.yaml
