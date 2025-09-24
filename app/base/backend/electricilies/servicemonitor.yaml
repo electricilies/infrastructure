@@ -3,11 +3,9 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: &name minio
+  name: electricilies
 spec:
-  selector:
-    matchLabels:
-      v1.min.io/tenant: *name
   endpoints:
-    - port: minio
-      path: /minio/v2/metrics/cluster
+    - port: main
+      path: /metrics
+  selector: {}

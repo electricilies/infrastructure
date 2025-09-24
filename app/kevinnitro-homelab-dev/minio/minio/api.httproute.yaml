@@ -13,8 +13,8 @@ spec:
     - <<: *gateway
       sectionName: http-wildcard-local
   hostnames:
-    - minio-api.electricilies.${IDVN_DOMAIN}
-    - minio-api.electricilies.${LOCAL_DOMAIN}
+    - minio-api-electricilies.${IDVN_DOMAIN}
+    - minio-api-electricilies.${LOCAL_DOMAIN}
   rules:
     - filters:
         - type: RequestRedirect
@@ -37,13 +37,13 @@ spec:
     - <<: *gateway
       sectionName: https-wildcard-local
   hostnames:
-    - minio-api.electricilies.${IDVN_DOMAIN}
-    - minio-api.electricilies.${LOCAL_DOMAIN}
+    - minio-api-electricilies.${IDVN_DOMAIN}
+    - minio-api-electricilies.${LOCAL_DOMAIN}
   rules:
     - matches:
         - path:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: http-minio
+        - name: minio-http-minio
           port: 9000

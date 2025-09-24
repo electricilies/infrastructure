@@ -5,4 +5,4 @@ kind: Kustomization
 metadata:
   name: elastic-elastic
 spec:
-  path: app/kevinnitro-homelab-dev/elastic/elastic/
+  path: app/kevinnitro-homelab-dev/elastic/elasticsearch/

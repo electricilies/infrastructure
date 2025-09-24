@@ -3,7 +3,7 @@
 apiVersion: minio.min.io/v2
 kind: Tenant
 metadata:
-  name: minio-minio
+  name: minio
 spec:
   requestAutoCert: false
   configuration:

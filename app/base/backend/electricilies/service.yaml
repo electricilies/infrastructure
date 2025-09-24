@@ -6,4 +6,5 @@ metadata:
   name: electricilies
 spec:
   ports:
-    - port: 8080
+    - name: main
+      port: 8080

@@ -10,7 +10,7 @@ spec:
       sectionName: https-wildcard
       namespace: gateway
   hostnames:
-    - flux-webhook.electricilies.${IDVN_DOMAIN}
+    - flux-webhook-electricilies.${IDVN_DOMAIN}
   rules:
     - matches:
         - path:
