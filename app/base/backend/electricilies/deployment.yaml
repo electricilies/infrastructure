@@ -23,6 +23,8 @@ spec:
               value: *name
             - name: DB_PORT
               value: "5432"
+            - name: GIN_MODE
+              value: release
           envFrom:
             - secretRef:
                 name: electricilies-elastic
