@@ -13,4 +13,4 @@ patches:
   - path: ./deployment.patch.yaml
 images:
   - name: ghcr.io/electricilies/backend
-    digest: sha256:3e98af06aedaa83a5bb288128508fb17d3522ee935b99209aa85f92776891877
+    digest: sha256:6a90f681e9b226265d3ee473eff6e417ba00d96b22c1981602ee11b30318a7ea
