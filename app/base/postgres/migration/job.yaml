@@ -31,3 +31,5 @@ spec:
               value: cnpg
             - name: DB_NAME
               value: electricilies
+            - name: DB_PORT
+              value: "5432"
