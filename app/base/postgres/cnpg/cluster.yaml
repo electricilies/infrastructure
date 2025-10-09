@@ -6,7 +6,7 @@ metadata:
   name: &name cnpg
 spec:
   instances: 1
-  imageName: paradedb/paradedb:v0.18.11-pg17
+  imageName: paradedb/paradedb:17-v0.18.11
   env:
     - name: TZ
       value: Asia/Ho_Chi_Minh
