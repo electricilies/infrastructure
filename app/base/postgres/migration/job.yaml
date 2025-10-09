@@ -15,6 +15,7 @@ spec:
             - migrate
             - apply
             - --env=dev
+            - allow-dirty
           env:
             - name: DB_USER
               valueFrom:
