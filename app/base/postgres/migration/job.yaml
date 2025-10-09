@@ -11,7 +11,7 @@ spec:
       containers:
         - name: migrate
           image: ghcr.io/electricilies/migrate:latest
-          command:
+          args:
             - migrate
             - apply
             - --env=dev
