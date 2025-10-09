@@ -6,9 +6,6 @@ namespace: electricilies-dev-frontend
 resources:
   - ../../../base/frontend/electricilies/
   - ./httproute.yaml
-labels:
-  - pairs:
-      alloy.kevinnitro/scrape: "1"
 patches:
   - path: ./deployment.patch.yaml
 images:
