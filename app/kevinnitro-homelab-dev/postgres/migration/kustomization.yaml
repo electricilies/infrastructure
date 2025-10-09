@@ -6,5 +6,5 @@ namespace: electricilies-dev-postgres
 resources:
   - ../../../base/postgres/migration/
 images:
-  - name: migrate/migrate
-    newTag: v4.19.0
+  - name: ghcr.io/electricilies/migrate
+    digest: sha256:3c72e834f6c40a829d9f49938d665ee2604dd3ff54e7fcc8b82a31b0d2b6c3a2
