@@ -5,6 +5,10 @@ on:
     types:
       - renovate
 
+concurrency:
+  cancel-in-progress: false
+  group: update-image
+
 jobs:
   renovate:
     runs-on: ubuntu-latest
