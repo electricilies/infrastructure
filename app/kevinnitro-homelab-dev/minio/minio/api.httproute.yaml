@@ -45,5 +45,5 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: minio-http-minio
-          port: 9000
+        - name: minio
+          port: 80
