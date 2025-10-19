@@ -16,6 +16,7 @@ spec:
   path: app/base/backend/electricilies/
   dependsOn:
     - name: postgres-migration
+    - name: backend-valkey
   decryption:
     provider: sops
     secretRef:
