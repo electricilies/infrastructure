@@ -3,22 +3,19 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: backend-electricilies
+  name: minio-create-bucket
+  labels:
+    flux.kevinnitro/substitute: "0"
 spec:
   interval: 1h
   retryInterval: 1m
   timeout: 5m
   wait: true
   prune: true
+  force: true
   sourceRef:
     kind: GitRepository
     name: electricilies
-  path: app/base/backend/electricilies/
+  path: app/base/minio/create-bucket/
   dependsOn:
-    - name: postgres-migration
-    - name: backend-valkey
-    - name: minio-create-bucket
-  decryption:
-    provider: sops
-    secretRef:
-      name: electricilies-sops-age
+    - name: minio-minio

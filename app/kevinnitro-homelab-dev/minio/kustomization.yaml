@@ -6,4 +6,5 @@ resources:
   - ../../base/minio/
   - ./namespace.yaml
 patches:
+  - path: ./create-bucket.ks.patch.yaml
   - path: ./minio.ks.patch.yaml
