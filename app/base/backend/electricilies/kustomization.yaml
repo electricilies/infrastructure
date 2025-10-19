@@ -8,7 +8,6 @@ labels:
     includeSelectors: true
 resources:
   - ./deployment.yaml
-  - ./elastic.secret.sops.yaml
   - ./keycloak.secret.sops.yaml
   - ./postgres.secret.sops.yaml
   - ./service.yaml

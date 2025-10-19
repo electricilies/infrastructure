@@ -13,7 +13,5 @@ spec:
       containers:
         - name: *name
           env:
-            - name: ELASTIC_URL
-              value: http://elastic-es-http.electricilies-dev-elastic:9200
             - name: DB_HOST
               value: cnpg.electricilies-dev-postgres
