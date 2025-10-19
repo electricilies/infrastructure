@@ -5,4 +5,4 @@ kind: Kustomization
 metadata:
   name: backend-valkey
 spec:
-  path: app/kevinnitro-homelab-dev/backend/valkey/
+  path: app/kevinnitro-homelab-dev/backend/redis/
