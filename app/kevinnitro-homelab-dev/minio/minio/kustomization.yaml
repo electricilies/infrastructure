@@ -20,4 +20,4 @@ patches:
         path: /spec/env/-
         value:
           name: MINIO_BROWSER_REDIRECT_URL
-          value: https://minio-console.electricilies.${IDVN_DOMAIN}
+          value: https://minio-console-electricilies.${IDVN_DOMAIN}
