@@ -3,20 +3,22 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: create-bucket
+  name: &name create-bucket
 spec:
   template:
     spec:
       restartPolicy: Never
       containers:
-        - name: create-bucket
+        - name: *name
           image: minio/mc:latest
           command:
-            - /usr/bin/sh
+            - /usr/bin/bash
             - -c
           args:
-            - |- # language: sh
-              mc alias set local http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD} &&
+            - |- # language: bash
+              set -euo pipefail
+
+              mc alias set local ${MINIO_API_URL} ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD} &&
               mc mb local/electricilies || true &&
               mc policy set public local/electricilies
           env:
@@ -30,3 +32,5 @@ spec:
                 secretKeyRef:
                   name: minio-config
                   key: MINIO_ROOT_PASSWORD
+            - name: MINIO_API_URL
+              value: http://minio.minio:9000

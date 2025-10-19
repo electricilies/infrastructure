@@ -5,3 +5,5 @@ kind: Kustomization
 namespace: electricilies-dev-minio
 resources:
   - ../../../base/minio/create-bucket/
+patches:
+  - path: ./job.patch.yaml
