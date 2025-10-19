@@ -1,0 +1,17 @@
+---
+apiVersion: hyperspike.io/v1
+kind: Valkey
+metadata:
+  name: valkey
+spec:
+  nodes: 1
+  volumePermissions: true
+  prometheus: true
+  tls: false
+  storage:
+    spec:
+      resources:
+        requests:
+          storage: 100Mi
+      accessModes:
+        - ReadWriteOnce

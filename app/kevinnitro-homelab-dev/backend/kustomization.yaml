@@ -7,6 +7,7 @@ resources:
   - ./namespace.yaml
 patches:
   - path: ./electricilies.ks.patch.yaml
+  - path: ./valkey.ks.patch.yaml
   - target:
       group: kustomize.toolkit.fluxcd.io
       version: v1
