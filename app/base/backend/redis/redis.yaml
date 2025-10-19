@@ -1,0 +1,19 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/redis.redis.opstreelabs.in/redis_v1beta2.json
+kind: Redis
+metadata:
+  name: redis-standalone
+spec:
+  kubernetesConfig:
+    image: quay.io/opstree/redis:v8.2.2
+  storage:
+    volumeClaimTemplate:
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 100Mi
+  redisExporter:
+    enabled: true
+    image: quay.io/opstree/redis-exporter:v1.78.0

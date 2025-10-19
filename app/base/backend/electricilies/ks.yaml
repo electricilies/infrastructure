@@ -16,8 +16,8 @@ spec:
   path: app/base/backend/electricilies/
   dependsOn:
     - name: postgres-migration
-    - name: backend-valkey
-    - name: minio-create-bucket
+    - name: minio-minio
+    - name: backend-redis
   decryption:
     provider: sops
     secretRef:
