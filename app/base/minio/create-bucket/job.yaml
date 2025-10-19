@@ -20,7 +20,7 @@ spec:
 
               mc alias set local ${MINIO_API_URL} ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD} &&
               mc mb local/electricilies || true &&
-              mc policy set public local/electricilies
+              mc anonymous set public local/electricilies
           env:
             - name: MINIO_ROOT_USER
               valueFrom:
