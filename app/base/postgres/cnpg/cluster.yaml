@@ -15,7 +15,7 @@ spec:
   storage:
     size: 100Mi
   monitoring:
-    enablePodMonitor: false
+    enablePodMonitor: true
   bootstrap:
     initdb:
       database: electricilies
