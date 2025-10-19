@@ -6,4 +6,3 @@ resources:
   - ./config.secret.sops.yaml
   - ./servicemonitor.yaml
   - ./tenant.yaml
-  - ./user.secret.sops.yaml

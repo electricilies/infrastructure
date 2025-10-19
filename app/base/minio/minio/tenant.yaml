@@ -8,8 +8,6 @@ spec:
   requestAutoCert: false
   configuration:
     name: minio-config
-  users:
-    - name: minio-user
   pools:
     - name: default
       servers: 1
