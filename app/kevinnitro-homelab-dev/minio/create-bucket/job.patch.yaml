@@ -11,4 +11,4 @@ spec:
         - name: *name
           env:
             - name: MINIO_API_URL
-              value: http://minio.electricilies-dev-minio:9000
+              value: http://minio.electricilies-dev-minio:80
