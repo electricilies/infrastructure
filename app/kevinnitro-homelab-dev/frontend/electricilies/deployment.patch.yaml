@@ -15,3 +15,5 @@ spec:
           env:
             - name: BACKEND_ENDPOINT
               value: electricilies.electricilies-dev-backend
+            - name: AUTH_KEYCLOAK_ISSUER
+              value: https://keycloak.${IDVN_DOMAIN}/realms/electricilies-dev

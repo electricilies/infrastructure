@@ -8,5 +8,6 @@ labels:
     includeSelectors: true
 resources:
   - ./deployment.yaml
+  - ./electricilies.secret.sops.yaml
   - ./keycloak.secret.sops.yaml
   - ./service.yaml

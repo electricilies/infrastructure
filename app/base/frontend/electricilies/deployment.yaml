@@ -17,9 +17,15 @@ spec:
           env:
             - name: BACKEND_ENDPOINT
               value: electricilies.backend
+            - name: AUTH_KEYCLOAK_ID
+              value: frontend
+            - name: AUTH_KEYCLOAK_ISSUER
+              value: https://keycloak.example.com/realms/electricilies
           envFrom:
             - secretRef:
                 name: electricilies-keycloak
+            - secretRef:
+                name: electricilies-electricilies
           # readinessProbe: &health
           #   httpGet:
           #     path: /api/health

@@ -8,6 +8,7 @@ resources:
   - ./httproute.yaml
 patches:
   - path: ./deployment.patch.yaml
+  - path: ./keycloak.patch.secret.sops.yaml
 images:
   - name: ghcr.io/electricilies/frontend
     digest: sha256:8710fe8b12bac235b2a6232af18222b4e5ba14c7b9bc95dcdc923dacfedcffad

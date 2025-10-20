@@ -23,11 +23,23 @@ spec:
               value: "5432"
             - name: GIN_MODE
               value: release
+            - name: REDIS_URL
+              value: redis
+            - name: S3_REGION_NAME
+              value: us-east-1
+            - name: S3_ENDPOINT
+              value: http://minio.minio:80
+            - name: KEYCLOAK_CLIENT_ID
+              value: backend
+            - name: KEYCLOAK_ISSUER
+              value: electricilies
           envFrom:
             - secretRef:
                 name: electricilies-keycloak
             - secretRef:
                 name: electricilies-postgres
+            - secretRef:
+                name: electricilies-minio
           readinessProbe: &health
             httpGet:
               path: /health

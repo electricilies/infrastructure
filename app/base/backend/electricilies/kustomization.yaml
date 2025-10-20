@@ -9,6 +9,7 @@ labels:
 resources:
   - ./deployment.yaml
   - ./keycloak.secret.sops.yaml
+  - ./minio.secret.sops.yaml
   - ./postgres.secret.sops.yaml
   - ./service.yaml
   - ./servicemonitor.yaml

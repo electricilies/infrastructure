@@ -15,3 +15,7 @@ spec:
           env:
             - name: DB_HOST
               value: cnpg.electricilies-dev-postgres
+            - name: KEYCLOAK_ISSUER
+              value: electricilies-dev
+            - name: S3_ENDPOINT
+              value: http://minio.electricilies-dev-backend:80
