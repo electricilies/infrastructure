@@ -1,6 +1,3 @@
 # vim:ft=gitignore:
 /**
-!/app/
-!/cluster/
-!/infrastructure/
-!/setting/
+!/kubernetes/

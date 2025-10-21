@@ -1,0 +1,22 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/fluxcd-community/flux2-schemas/main/kustomization-kustomize-v1.json
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: frontend-electricilies
+spec:
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  wait: true
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: electricilies
+  path: kubernetes/app/base/frontend/electricilies/
+  dependsOn:
+    - name: backend-electricilies
+  decryption:
+    provider: sops
+    secretRef:
+      name: electricilies-sops-age
