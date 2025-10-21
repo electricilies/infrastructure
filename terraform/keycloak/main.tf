@@ -24,7 +24,7 @@ resource "keycloak_openid_client" "backend" {
   client_id     = "backend"
   name          = "Backend"
   access_type   = "CONFIDENTIAL"
-  client_secret = var.keycloak_backend_client_secret
+  client_secret = var.backend_client_secret
 }
 
 resource "keycloak_openid_client" "frontend" {
@@ -32,15 +32,15 @@ resource "keycloak_openid_client" "frontend" {
   client_id                       = "frontend"
   access_type                     = "CONFIDENTIAL"
   name                            = "Frontend"
-  client_secret                   = var.keycloak_frontend_client_secret
+  client_secret                   = var.frontend_client_secret
   standard_flow_enabled           = true
   standard_token_exchange_enabled = true
   direct_access_grants_enabled    = true
-  root_url                        = var.keycloak_frontend_root_url
-  base_url                        = var.keycloak_frontend_base_url
+  root_url                        = var.frontend_root_url
+  base_url                        = var.frontend_base_url
   valid_redirect_uris             = ["*"]
-  web_origins                     = var.keycloak_frontend_web_origins
-  admin_url                       = var.keycloak_frontend_admin_url
+  web_origins                     = var.frontend_web_origins
+  admin_url                       = var.frontend_admin_url
 }
 
 resource "keycloak_realm_user_profile" "userprofile" {
