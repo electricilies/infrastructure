@@ -3,15 +3,18 @@ variable "keycloak_url" {
 }
 
 variable "terraform_client_secret" {
-  type = string
+  type      = string
+  sensitive = true
 }
 
 variable "backend_client_secret" {
-  type = string
+  type      = string
+  sensitive = true
 }
 
 variable "frontend_client_secret" {
-  type = string
+  type      = string
+  sensitive = true
 }
 
 variable "frontend_root_url" {
