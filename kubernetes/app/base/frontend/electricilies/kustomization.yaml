@@ -9,5 +9,6 @@ labels:
 resources:
   - ./deployment.yaml
   - ./electricilies.secret.sops.yaml
+  - ./horizontalpodautoscaler.yaml
   - ./keycloak.secret.sops.yaml
   - ./service.yaml

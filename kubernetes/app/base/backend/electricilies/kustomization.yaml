@@ -8,6 +8,7 @@ labels:
     includeSelectors: true
 resources:
   - ./deployment.yaml
+  - ./horizontalpodautoscaler.yaml
   - ./keycloak.secret.sops.yaml
   - ./minio.secret.sops.yaml
   - ./postgres.secret.sops.yaml
