@@ -111,8 +111,8 @@ resource "keycloak_realm_user_profile" "userprofile" {
   }
 
   attribute {
-    name         = "birthday"
-    display_name = "Birthday"
+    name         = "date_of_birth"
+    display_name = "Date of birth"
     permissions {
       view = ["admin", "user"]
       edit = ["admin", "user"]
