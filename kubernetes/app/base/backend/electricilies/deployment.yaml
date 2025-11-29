@@ -39,6 +39,8 @@ spec:
               value: http://keycloak.keycloak:8080
             - name: KC_HTTP_MANAGEMENT_PATH
               value: http://keycloak.keycloak:9000
+            - name: PUBLIC_KEYCLOAK_URL
+              value: http://keycloak.com:8080
           envFrom:
             - secretRef:
                 name: electricilies-keycloak

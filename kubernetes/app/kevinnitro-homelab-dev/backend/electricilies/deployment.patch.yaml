@@ -19,3 +19,5 @@ spec:
               value: electricilies-dev
             - name: S3_ENDPOINT
               value: http://minio.electricilies-dev-minio:80
+            - name: PUBLIC_KEYCLOAK_URL
+              value: https://keycloak.${IDVN_DOMAIN}
