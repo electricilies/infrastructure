@@ -7,4 +7,4 @@ resources:
   - ../../../base/postgres/migration/
 images:
   - name: ghcr.io/electricilies/migrate
-    digest: sha256:1c82dc2a31f010796579521f4e6fc88608f4d4744db2fedcb1338fb9c1695d09
+    digest: sha256:16d2f2df1ce3db033a4e85f16efefc5f9ce2c9d364fd0edf14e4acf15d2b2fb3
