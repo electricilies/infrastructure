@@ -10,6 +10,8 @@ terraform {
 
 resource "keycloak_realm" "electricilies" {
   realm                    = "electricilies-dev"
+  access_code_lifespan     = "12h"
+  access_token_lifespan    = "8760h"
   duplicate_emails_allowed = false
   login_with_email_allowed = true
   registration_allowed     = true
