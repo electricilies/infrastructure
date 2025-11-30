@@ -19,6 +19,11 @@ variable "backend_web_origins" {
   description = "A list of allowed CORS origins. To permit all valid redirect URIs, add +. Note that this will not include the * wildcard. To permit all origins, explicitly add *."
 }
 
+variable "backend_valid_redirect_uris" {
+  type        = list(string)
+  description = "A list of valid URIs a browser is permitted to redirect to after a successful login or logout. Simple wildcards in the form of an asterisk can be used here. This attribute must be set if either standard_flow_enabled or implicit_flow_enabled is set to true."
+}
+
 variable "frontend_client_secret" {
   type        = string
   sensitive   = true

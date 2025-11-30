@@ -28,6 +28,7 @@ resource "keycloak_openid_client" "backend" {
   access_type              = "CONFIDENTIAL"
   client_secret            = var.backend_client_secret
   service_accounts_enabled = true
+  valid_redirect_uris      = var.backend_valid_redirect_uris
   web_origins              = var.backend_web_origins
 }
 
