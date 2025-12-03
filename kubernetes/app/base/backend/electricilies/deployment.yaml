@@ -61,9 +61,9 @@ spec:
             failureThreshold: 3
           resources:
             requests:
-              cpu: 10m
-              memory: 100Mi
+              cpu: 50m
+              memory: 200Mi
             limits:
-              cpu: 500m
-              memory: 500Mi
+              cpu: 300m
+              memory: 300Mi
   selector: {}
