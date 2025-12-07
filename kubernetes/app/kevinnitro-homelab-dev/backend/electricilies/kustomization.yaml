@@ -8,6 +8,7 @@ resources:
   - ./httproute.yaml
 patches:
   - path: ./deployment.patch.yaml
+  - path: ./electricilies.secret.patch.sops.yaml
   - path: ./keycloak.secret.patch.sops.yaml
 images:
   - name: ghcr.io/electricilies/backend
