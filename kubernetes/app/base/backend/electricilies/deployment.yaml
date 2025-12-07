@@ -41,6 +41,8 @@ spec:
               value: http://keycloak.keycloak:9000
           envFrom:
             - secretRef:
+                name: electricilies-electricilies
+            - secretRef:
                 name: electricilies-keycloak
             - secretRef:
                 name: electricilies-postgres
