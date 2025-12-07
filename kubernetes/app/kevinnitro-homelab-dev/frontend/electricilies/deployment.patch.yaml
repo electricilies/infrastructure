@@ -13,7 +13,7 @@ spec:
       containers:
         - name: *name
           env:
-            - name: BACKEND_ENDPOINT
-              value: electricilies.electricilies-dev-backend
+            - name: NEXT_PUBLIC_BASE_URL
+              value: https://backend-electricilies.${IDVN_DOMAIN}/api
             - name: AUTH_KEYCLOAK_ISSUER
               value: https://keycloak.${IDVN_DOMAIN}/realms/electricilies-dev

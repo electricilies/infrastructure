@@ -15,8 +15,8 @@ spec:
           ports:
             - containerPort: 3000
           env:
-            - name: BACKEND_ENDPOINT
-              value: electricilies.backend
+            - name: NEXT_PUBLIC_BASE_URL
+              value: backend.elecitricilies.com
             - name: AUTH_KEYCLOAK_ID
               value: frontend
             - name: AUTH_KEYCLOAK_ISSUER
