@@ -21,6 +21,8 @@ spec:
               value: frontend
             - name: AUTH_KEYCLOAK_ISSUER
               value: https://keycloak.example.com/realms/electricilies
+            - name: AUTH_TRUST_HOST
+              value: "true"
           envFrom:
             - secretRef:
                 name: electricilies-keycloak
