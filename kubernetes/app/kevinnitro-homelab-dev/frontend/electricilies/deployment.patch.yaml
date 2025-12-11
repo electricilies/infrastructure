@@ -17,3 +17,5 @@ spec:
               value: https://backend-electricilies.${IDVN_DOMAIN}/api
             - name: AUTH_KEYCLOAK_ISSUER
               value: https://keycloak.${IDVN_DOMAIN}/realms/electricilies-dev
+            - name: AUTH_URL
+              value: https://frontend-electricilies.${IDVN_DOMAIN}
