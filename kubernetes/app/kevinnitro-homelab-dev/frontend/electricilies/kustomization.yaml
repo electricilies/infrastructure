@@ -11,4 +11,4 @@ patches:
   - path: ./keycloak.patch.secret.sops.yaml
 images:
   - name: ghcr.io/electricilies/frontend
-    digest: sha256:871607f0330b61c08b72d6e5c0a01386841e911fe63599500a7849416579f354
+    digest: sha256:436ae1263689c018778433dec71d818949b38f154d6e08709466b638a0e8e87d
